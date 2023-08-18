@@ -35,3 +35,31 @@ console.log(reArea)
 const TotaRectangle = document.getElementById('rectangle-area')
 TotaRectangle.innerText = reArea
 }
+
+// made other law other design and other connection and other function 
+function CalculateParallelogramArea(){
+const base = getInputValue('Parallelogram-title')
+const hight = getInputValue('Parallelogram-hight')
+const areas = base * hight;
+console.log(areas)
+setElementInnerText('Parallelogram-area',areas)
+}
+
+function CalculateEllipseArea(){
+    const majorRadious = getInputValue('Ellipse-title')
+    const mainorRadious = getInputValue('Ellipse-hight')
+    const area = 3.14 * majorRadious * mainorRadious
+    console.log(area)
+    setElementInnerText('Ellipse-area',area)
+}
+
+function getInputValue(fildidID){
+    const inputFild =document.getElementById(fildidID)
+    const inputFildString = inputFild.value;
+    const value = parseFloat(inputFildString)
+    return value
+}
+function setElementInnerText(elementId,areas){
+    const element = document.getElementById(elementId)
+    element.innerText = areas;
+}
